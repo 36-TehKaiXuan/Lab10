@@ -65,5 +65,24 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "*");
             Assert.AreEqual(result, 3);
         }
+
+        //Division
+        [Test]
+        public void TestDivision()
+        {
+            //Use assert class to test conditions
+            result = Calculator.CalculatePair(5, 2, "/");
+            Assert.AreEqual(result, 3);
+        }
+        [UnityTest]
+        public IEnumerator TestUnityDivision()
+        {
+            //Use the Assert class to test conditions
+            //Use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "/");
+            Assert.AreEqual(result, 3);
+        }
     }
 }
