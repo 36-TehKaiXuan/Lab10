@@ -53,7 +53,7 @@ namespace Tests
         {
             //Use assert class to test conditions
             result = Calculator.CalculatePair(5, 2, "*");
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 10);
         }
         [UnityTest]
         public IEnumerator TestUnityMultiplication()
@@ -63,7 +63,7 @@ namespace Tests
             yield return null;
 
             result = Calculator.CalculatePair(5, 2, "*");
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 10);
         }
 
         //Division
@@ -71,7 +71,7 @@ namespace Tests
         public void TestDivision()
         {
             //Use assert class to test conditions
-            result = Calculator.CalculatePair(5, 2, "/");
+            result = Calculator.CalculatePair(6, 2, "/");
             Assert.AreEqual(result, 3);
         }
         [UnityTest]
@@ -81,7 +81,7 @@ namespace Tests
             //Use yield to skip a frame
             yield return null;
 
-            result = Calculator.CalculatePair(5, 2, "/");
+            result = Calculator.CalculatePair(6, 2, "/");
             Assert.AreEqual(result, 3);
         }
 
@@ -91,7 +91,7 @@ namespace Tests
         {
             //Use assert class to test conditions
             result = Calculator.CalculatePair(5, 2, "^");
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 25);
         }
         [UnityTest]
         public IEnumerator TestUnityPower()
@@ -101,7 +101,7 @@ namespace Tests
             yield return null;
 
             result = Calculator.CalculatePair(5, 2, "^");
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 25);
         }
 
         //Sqrt
@@ -109,8 +109,8 @@ namespace Tests
         public void TestSqrt()
         {
             //Use assert class to test conditions
-            result = Calculator.CalculatePair(5, 2, "√");
-            Assert.AreEqual(result, 3);
+            result = Calculator.CalculatePair(16, 0, "√");
+            Assert.AreEqual(result, 4);
         }
         [UnityTest]
         public IEnumerator TestUnitySqrt()
@@ -119,8 +119,8 @@ namespace Tests
             //Use yield to skip a frame
             yield return null;
 
-            result = Calculator.CalculatePair(5, 2, "√");
-            Assert.AreEqual(result, 3);
+            result = Calculator.CalculatePair(16, 0, "√");
+            Assert.AreEqual(result, 4);
         }
     }
 }
