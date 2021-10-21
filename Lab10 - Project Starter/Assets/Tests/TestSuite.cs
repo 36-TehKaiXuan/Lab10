@@ -9,7 +9,7 @@ namespace Tests
     public class TestSuite
     {
         public float result = 0.0f;
-
+        //Addition
         [Test]
         public void TestAddition()
         {
@@ -17,7 +17,6 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "+");
             Assert.AreEqual(result, 7);
         }
-
         [UnityTest]
         public IEnumerator TestUnityAddition()
         {
@@ -29,6 +28,7 @@ namespace Tests
             Assert.AreEqual(result, 7);
         }
 
+        //Subtraction
         [Test]
         public void TestSubtraction()
         {
@@ -36,7 +36,6 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "-");
             Assert.AreEqual(result, 3);
         }
-
         [UnityTest]
         public IEnumerator TestUnitySubtraction()
         {
@@ -45,6 +44,25 @@ namespace Tests
             yield return null;
 
             result = Calculator.CalculatePair(5, 2, "-");
+            Assert.AreEqual(result, 3);
+        }
+
+        //Multiplication
+        [Test]
+        public void TestMultiplication()
+        {
+            //Use assert class to test conditions
+            result = Calculator.CalculatePair(5, 2, "*");
+            Assert.AreEqual(result, 3);
+        }
+        [UnityTest]
+        public IEnumerator TestUnityMultiplication()
+        {
+            //Use the Assert class to test conditions
+            //Use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "*");
             Assert.AreEqual(result, 3);
         }
     }
