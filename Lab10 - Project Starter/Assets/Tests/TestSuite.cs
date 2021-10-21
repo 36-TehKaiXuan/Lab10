@@ -84,5 +84,43 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "/");
             Assert.AreEqual(result, 3);
         }
+
+        //Power
+        [Test]
+        public void TestPower()
+        {
+            //Use assert class to test conditions
+            result = Calculator.CalculatePair(5, 2, "^");
+            Assert.AreEqual(result, 3);
+        }
+        [UnityTest]
+        public IEnumerator TestUnityPower()
+        {
+            //Use the Assert class to test conditions
+            //Use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "^");
+            Assert.AreEqual(result, 3);
+        }
+
+        //Sqrt
+        [Test]
+        public void TestSqrt()
+        {
+            //Use assert class to test conditions
+            result = Calculator.CalculatePair(5, 2, "√");
+            Assert.AreEqual(result, 3);
+        }
+        [UnityTest]
+        public IEnumerator TestUnitySqrt()
+        {
+            //Use the Assert class to test conditions
+            //Use yield to skip a frame
+            yield return null;
+
+            result = Calculator.CalculatePair(5, 2, "√");
+            Assert.AreEqual(result, 3);
+        }
     }
 }
